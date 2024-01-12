@@ -20,8 +20,8 @@ body {
 
 h1 {
 	margin: 150px auto 10px auto;
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	width: fit-content;
 	padding: 0 10px;
 }
@@ -34,11 +34,14 @@ h1 {
 h2 {
 	background-color: #f1c232;
 	color: white;
+	padding: 0 10px;
+	text-align: center;
+	border-radius: 5px;
 }
 
-h2::before {
+/* h2::before {
 	content: ">> ";
-}
+} */
 
 .content {
 	margin: 50px 20px 0 20px;
