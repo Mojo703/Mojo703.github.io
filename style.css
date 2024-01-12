@@ -25,6 +25,7 @@ h1 {
 	width: fit-content;
 	padding: 0 10px;
 	border-radius: 5px;
+	text-align: center;
 }
 
 .subheader {
