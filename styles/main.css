@@ -14,13 +14,13 @@ body {
 	font-family: Consolas, monaco, monospace;
 }
 
-h2 {
+/* h2 {
 	padding: 0 10px;
 	text-align: center;
 	margin: 2em auto;
 	max-width: 21em;
 	border-bottom: 3px solid #0c343d;
-}
+} */
 
 body {
 	padding: 5vw;
@@ -77,6 +77,15 @@ h1 {
 	padding: 0 10px;
 	border-radius: 5px;
 	text-align: center;
+}
+
+h2 {
+	background-color: #f1c232;
+	color: white;
+	padding: 0 10px;
+	text-align: center;
+	border-radius: 5px;
+	border: none;
 }
 
 .subheader {

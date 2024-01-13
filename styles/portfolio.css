@@ -3,14 +3,14 @@
 	max-width: unset;
 } */
 
-h2 {
+/* h2 {
 	background-color: #f1c232;
 	color: white;
 	padding: 0 10px;
 	text-align: center;
 	border-radius: 5px;
 	border: none;
-}
+} */
 
 .image-pane {
 	display: grid;
