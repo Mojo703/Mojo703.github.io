@@ -14,10 +14,15 @@ body {
 	font-family: Consolas, monaco, monospace;
 }
 
+body {
+	padding: 5vw;
+}
+
 .banner {
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0;
+	left: 0;
 	z-index: -1;
 }
 
@@ -68,12 +73,12 @@ h1 {
 }
 
 .content {
-	margin: 50px 5vw 4vw 5vw;
+	margin: 50px auto 4vw auto;
 	padding: 10px;
 	background-color: #ffffffe3;
 	border-radius: 5px;
+	max-width: 1200px;
 }
-
 
 .page_pane {
 	display: grid;
@@ -103,7 +108,7 @@ h2>a {
 
 @media (max-width: 800px) {
 	html {
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	/* CSS that should be displayed if width is equal to or less than 800px goes here */

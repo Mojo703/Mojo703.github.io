@@ -1,3 +1,8 @@
+.content {
+	/* margin: 50px 0 4vw 0; */
+	max-width: unset;
+}
+
 h2 {
 	background-color: #f1c232;
 	color: white;
@@ -7,7 +12,6 @@ h2 {
 }
 
 p {
-	max-width: 1200px;
 	margin: auto;
 	padding: 0.5em 5vw;
 }
