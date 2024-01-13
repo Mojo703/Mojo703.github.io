@@ -14,6 +14,14 @@ body {
 	font-family: Consolas, monaco, monospace;
 }
 
+h2 {
+	background-color: #f1c232;
+	color: white;
+	padding: 0 10px;
+	text-align: center;
+	border-radius: 5px;
+}
+
 body {
 	padding: 5vw;
 }
@@ -93,14 +101,14 @@ h1 {
 	grid-row: 1 / span 2;
 }
 
-.page_pane>h2 {
+.page_pane>h3 {
 	border-bottom: 2.5px solid #ffd966;
 	width: max-content;
 	display: block;
 	margin: 5px 0;
 }
 
-h2>a {
+h3>a {
 	color: inherit;
 	text-decoration: inherit;
 }
@@ -121,7 +129,7 @@ h2>a {
 		max-width: 300px;
 	}
 
-	.page_pane>h2 {
+	.page_pane>h3 {
 		margin: auto;
 	}
 

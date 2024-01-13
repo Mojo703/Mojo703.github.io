@@ -3,14 +3,6 @@
 	max-width: unset;
 }
 
-h2 {
-	background-color: #f1c232;
-	color: white;
-	padding: 0 10px;
-	text-align: center;
-	border-radius: 5px;
-}
-
 p {
 	margin: auto;
 	padding: 0.5em 5vw;
