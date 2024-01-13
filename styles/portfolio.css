@@ -1,0 +1,34 @@
+h2 {
+	background-color: #f1c232;
+	color: white;
+	padding: 0 10px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+p {
+	max-width: 1200px;
+	margin: auto;
+	padding: 0.5em 5vw;
+}
+
+.image-pane {
+	display: grid;
+	grid-template-columns: auto auto;
+	margin: auto;
+	grid-column-gap: 1em;
+	max-width: 1000px;
+	padding: 0 5vw;
+}
+
+.image-pane>img {
+	width: 100%;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+@media (max-width: 800px) {
+	.image-pane {
+		grid-template-columns: auto;
+	}
+}
