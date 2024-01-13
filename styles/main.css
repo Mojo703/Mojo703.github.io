@@ -15,15 +15,20 @@ body {
 }
 
 h2 {
-	background-color: #f1c232;
-	color: white;
 	padding: 0 10px;
 	text-align: center;
-	border-radius: 5px;
+	margin: 2em auto;
+	max-width: 21em;
+	border-bottom: 3px solid #0c343d;
 }
 
 body {
 	padding: 5vw;
+}
+
+.content>p {
+	margin: auto;
+	padding: 0.5em 5vw;
 }
 
 .banner {
@@ -94,6 +99,9 @@ h1 {
 	grid-template-rows: min-content 1fr;
 	margin: 20px;
 	grid-column-gap: 1em;
+	background-color: inherit;
+	border-radius: 5px;
+	overflow: hidden;
 }
 
 .page_pane>img {
@@ -135,6 +143,8 @@ h3>a {
 
 	.page_pane>p {
 		text-align: justify;
+		margin-left: 2em;
+		margin-right: 2em;
 	}
 }
 
