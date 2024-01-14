@@ -24,7 +24,8 @@ body {
 	padding: 5vw;
 }
 
-.content>p {
+.content>p,
+.content>ul {
 	margin: 0.5em 5vw;
 	text-indent: 1.5em;
 }
