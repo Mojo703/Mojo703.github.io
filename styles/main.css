@@ -11,6 +11,12 @@ body {
 	bottom: 0;
 	margin: 0;
 	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+.navbar>* {
 	font-family: Consolas, monaco, monospace;
 }
 
@@ -27,8 +33,8 @@ body {
 }
 
 .content>p {
-	margin: auto;
-	padding: 0.5em 5vw;
+	margin: 0.5em 5vw;
+	text-indent: 1.5em;
 }
 
 .banner {
@@ -102,7 +108,22 @@ h2 {
 	max-width: 1200px;
 }
 
-.page_pane {
+.image-pane {
+	display: grid;
+	grid-template-columns: auto auto;
+	margin: 2em auto;
+	grid-column-gap: 1em;
+	max-width: 1000px;
+	padding: 0 5vw;
+}
+
+.image-pane>img {
+	width: 100%;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.page-pane {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 	grid-template-rows: min-content 1fr;
@@ -113,44 +134,47 @@ h2 {
 	overflow: hidden;
 }
 
-.page_pane>img {
+.page-pane>img {
 	width: 100%;
 	grid-row: 1 / span 2;
 }
 
-.page_pane>h3 {
+.page-pane>h3 {
 	border-bottom: 2.5px solid #ffd966;
 	width: max-content;
 	display: block;
 	margin: 5px 0;
 }
 
-h3>a {
+.page-pane>h3>a {
 	color: inherit;
 	text-decoration: inherit;
 }
 
-
+/* CSS that should be displayed if width is equal to or less than 800px goes here */
 @media (max-width: 800px) {
 	html {
 		font-size: 14px;
 	}
 
-	/* CSS that should be displayed if width is equal to or less than 800px goes here */
-	.page_pane {
+	.image-pane {
+		grid-template-columns: auto;
+	}
+
+	.page-pane {
 		display: block;
 		text-align: center;
 	}
 
-	.page_pane>img {
+	.page-pane>img {
 		max-width: 300px;
 	}
 
-	.page_pane>h3 {
+	.page-pane>h3 {
 		margin: auto;
 	}
 
-	.page_pane>p {
+	.page-pane>p {
 		text-align: justify;
 		margin-left: 2em;
 		margin-right: 2em;

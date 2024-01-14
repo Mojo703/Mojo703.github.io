@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./icons/icon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Matthew's Portfolio</title>
+    <link href="./styles/main.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <img class="banner" src="images/banner.png" />
+    <h1>Matthew Goodman</h1>
+    <div class="content">
+      <div class="navbar">
+        <a href="./index.html"
+          ><img class="inline_icon" src="./icons/home.png" alt="" />Home</a
+        >
+        <a href="./portfolio.html"
+          ><img
+            class="inline_icon"
+            src="./icons/class_projects.png"
+            alt=""
+          />Portfolio</a
+        >
+        <a href="./resume.pdf"
+          ><img class="inline_icon" src="./icons/resume.png" alt="" />Resume</a
+        >
+      </div>
+      <h2>Automatic Window System</h2>
+      <p>A project for ENSC 100W. An automated window actuation system.</p>
+      <p>
+        The goal of the class was to design a product that solves a problem in
+        the world. We went through many ideas, but settled on a system to manage
+        the temperature of a room. The most effective system we came up with was
+        an actuator to control a window, to let cold or warm air into a room. We
+        chose a sliding window, and a belt drive system.
+      </p>
+      <div class="image-pane">
+		  <img src="./images/auto window.png" />
+		  <img src="./images/Window/Window (Motor Assembly).png" />
+		  <img src="./images/auto window circuit.png" />
+		  <img src="./images/Window/Window (Full).png" />
+      </div>
+      <h2>Prototyping</h2>
+      <p>
+        The first major obstacle we encountered was outside weather. If it is
+        raining outside, you might not want your window open. To solve this, our
+        device pulls weather data from a public API (called OpenWeather) via
+        HTTP and WiFi. In addition, this also keeps the microcontroller's
+        internal time accurate, and provides an accurate outside temperature
+        estimate. As a result, the entire device remains within the room.
+      </p>
+      <p>
+        The second obstacle was holding a stable connection on the school's WiFi
+        network. This required significant reasearch into difference commercial
+        systems and standards, to allow repeated calls to the API. In the end,
+        this prototype functioned most places on campus.
+      </p>
+      <p>
+        The last major issue we encountered was reliability of the actuator.
+        Occasionally the limit switches on the actuator would take too long to
+        activate, and the window would try to go past its travel limits. As a
+        result the motor would skip steps on its belt. To solve this, small
+        springs were placed, to lengthen the avaliable actuation distance of the
+        switches.
+      </p>
+      <div class="image-pane">
+        <img src="./images/Window/Window (Sensor Circuit).png" />
+        <img src="./images/Window/Window (Sensor Output).png" />
+        <img src="./images/Window/Window (Weather Data).png" />
+      </div>
+	  <div class="footer">
+        <p>Contact me: mpg3@sfu.ca, <a href="https://www.linkedin.com/in/matthew-goodman-b2a4bb289">linkedin</a></p>
+        <p>Updated 2024-01-14</p>
+      </div>
+    </div>
+  </body>
+</html>
