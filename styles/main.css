@@ -47,6 +47,7 @@ body {
 	border-radius: 5px;
 	overflow: hidden;
 	font-size: large;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 }
 
 .navbar>* {
@@ -76,6 +77,7 @@ h1 {
 	padding: 0 10px;
 	border-radius: 5px;
 	text-align: center;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
@@ -85,6 +87,7 @@ h2 {
 	text-align: center;
 	border-radius: 5px;
 	border: none;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
 }
 
 .subheader {
@@ -99,6 +102,7 @@ h2 {
 	background-color: #ffffffe3;
 	border-radius: 5px;
 	max-width: 1200px;
+	box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
 }
 
 .image-pane {
@@ -125,6 +129,7 @@ h2 {
 	background-color: inherit;
 	border-radius: 5px;
 	overflow: hidden;
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
 }
 
 .page-pane>img {
@@ -176,4 +181,5 @@ h2 {
 
 .footer {
 	text-align: center;
+	margin-top: 3em;
 }
