@@ -16,6 +16,7 @@ body {
 
 h1,
 h2,
+h3,
 .navbar>* {
 	font-family: Consolas, monaco, monospace;
 }
@@ -104,6 +105,59 @@ h2 {
 	max-width: 1200px;
 	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
 }
+
+.collapsible {
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 5px;
+	border-radius: 5px;
+	margin: 0.5em 0;
+	display: grid;
+}
+
+/* .collapsible.closed {
+	overflow: hidden;
+	grid-template-rows: auto 0;
+} */
+
+.collapsible>h3 {
+	margin: 0 0 10px 0;
+	cursor: pointer;
+}
+
+.collapsible.closed>h3 {
+	margin: 0;
+}
+
+.collapsible.closed>div {
+	display: none;
+}
+
+.collapsible.closed>h3::before {
+	content: "+";
+}
+
+.collapsible>h3::before {
+	content: "-";
+	padding: 0 10px;
+	display: inline-block;
+	text-align: center;
+}
+
+
+.gist-data {
+	height: 50vh;
+}
+
+.gist {
+	max-width: 100%;
+	overflow: auto;
+	font-size: smaller;
+}
+
+/* .gist .blob-wrapper.data {
+	max-height: 200px;
+	overflow: auto;
+} */
 
 .image-pane {
 	display: grid;
