@@ -21,14 +21,14 @@ h3,
 	font-family: Consolas, monaco, monospace;
 }
 
-body {
-	padding: 5vw;
-}
-
 .content>p,
 .content>ul {
 	margin: 0.5em 5vw;
 	text-indent: 1.5em;
+}
+
+.spacer {
+	padding: 5vw;
 }
 
 .banner {
@@ -142,7 +142,6 @@ h2 {
 	display: inline-block;
 	text-align: center;
 }
-
 
 .gist-data {
 	height: 50vh;
