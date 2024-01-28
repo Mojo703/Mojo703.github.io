@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./icons/icon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Frontier Game</title>
+    <link href="./styles/main.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <img class="banner" src="images/banner.png" />
+    <h1>Frontier Project</h1>
+    <div class="spacer">
+      <div class="content">
+        <div class="navbar">
+          <a href="./index.html"
+            ><img class="inline_icon" src="./icons/home.png" alt="" />Home</a
+          >
+          <a href="./portfolio.html"
+            ><img
+              class="inline_icon"
+              src="./icons/class_projects.png"
+              alt=""
+            />Portfolio</a
+          >
+          <a href="./resume.pdf"
+            ><img
+              class="inline_icon"
+              src="./icons/resume.png"
+              alt=""
+            />Resume</a
+          >
+        </div>
+        <h2>Overview</h2>
+        <p>
+          A singleplayer management game made in 14 days for the 2024 Pirate
+          Software Game Jam. It can be played in the browser
+          <a href="https://tiki720.itch.io/frontier">here</a>.
+        </p>
+        <p>
+          Frontier was designed around the game jam's theme of "It's Spreading."
+          As such, you represent the main computer of a sleeper ship, destined
+          to colonize the TRAPPIST-1 solar system. To accomplish this goal, you
+          need to balance the inputs and outputs of the various systems on the
+          ship. The Pathfinder IV must survive dangerous encouters in open space.
+        </p>
+        <p>
+          In retrospect, the concept was overambitious, however I learned the
+          limits of what I can complete as a solo developer.
+        </p>
+        <div class="image-pane">
+          <img src="./images/Frontier/unity_title.png" />
+        </div>
+        <h2>Gameplay</h2>
+        <p>
+          The premise behind the gameplay was that the player should be guided
+          into dilemmas, where they have to make a decision that will impact the
+          course of the game. With this in mind, the game was structured around
+          an event timeline system, which allows the player to select a reaction
+          to the event's effects. For example, one of the suspension decks
+          fails, waking a large amount of crew who were prepared to sleep the
+          entire journey. The options for this scenario are to put them all back
+          to sleep, or make use of their skills in maintaining the ship.
+        </p>
+        <p>
+          To accomplish this premise, an in-depth UI system was required, the
+          current implemented functionality is:
+        </p>
+        <ul>
+          <li>Resource network view, with input and output statistics.</li>
+          <li>Ship system inspection, with boosting minigames.</li>
+          <li>Crew management and relocation between systems.</li>
+          <li>Event popup section and detailed view avaliable.</li>
+          <li>Timeline showing future events.</li>
+          <li>And lastly, a play, pause, and fast forward system.</li>
+        </ul>
+        <p>
+          To create the dynamic UI, over 6,000 lines of custom code were needed,
+          in addition to the unique 2D art assets, and interaction sound
+          effects. The result is lacking a tutorial, and the depth of events
+          that I had planned, but most of the core gameplay is in place.
+        </p>
+        <div class="image-pane">
+          <img src="./images/Frontier/unity_ingame.png" />
+          <img src="./images/Frontier/unity_targeting.png" />
+        </div>
+        <h2>Art</h2>
+        <p>
+          The facet of making the game that I learned the most from was the 3D
+          art. I have significant experience with modelling software like
+          SolidWorks, but Blender has a very different workflow. However, I
+          think the end result fits in well with what I wanted out of Frontier.
+        </p>
+        <p>
+          I am most proud of the suble emission textures and lighting effects,
+          that help the model feel real, within the detail limits imposed by browser rendering with OpenGL.
+        </p>
+        <div class="image-pane">
+          <img src="./images/Frontier/blender_materials.png" />
+          <img src="./images/Frontier/blender_unshaded.png" />
+        </div>
+		<p>Another challenge I encountered was making the icons legible on the target resolution of 960x600. This took a lot of trial and error, and designing distinct shaped an geometries for important sprites.</p>
+		<div class="image-pane">
+			<img src="./images/Frontier/inkscape_crew icons.png">
+			<img src="./images/Frontier/unity_final resolution.png">
+		</div>
+        <div class="footer">
+          <p>
+            Contact me: mpg3@sfu.ca,
+            <a href="https://www.linkedin.com/in/matthew-goodman-b2a4bb289"
+              >linkedin</a
+            >
+          </p>
+          <p>Updated 2024-01-27</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
