@@ -23,8 +23,6 @@ function addSection(sectionsList, element, index) {
 	sectionLink.href = `#${id}`;
 	sectionLink.innerText = sectionName;
 
-	console.log('sectionLink: ', sectionLink)
-
 	// Add it to the DOM
 	sectionsList.appendChild(sectionLink);
 }

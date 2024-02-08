@@ -1,3 +1,8 @@
+:root {
+	--low-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+	--high-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2)
+}
+
 html {
 	background-color: #161e03;
 }
@@ -38,7 +43,7 @@ h3,
 	background-color: #ffffffe3;
 	border-radius: 5px;
 	max-width: 1200px;
-	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+	box-shadow: var(--high-shadow);
 }
 
 .banner {
@@ -58,7 +63,7 @@ h3,
 	border-radius: 5px;
 	overflow: hidden;
 	font-size: large;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: var(--low-shadow);
 }
 
 .navbar>* {
@@ -89,7 +94,7 @@ h1 {
 	padding: 0 10px;
 	border-radius: 5px;
 	text-align: center;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: var(--high-shadow);
 }
 
 h2 {
@@ -99,7 +104,7 @@ h2 {
 	text-align: center;
 	border-radius: 5px;
 	border: none;
-	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+	box-shadow: var(--low-shadow);
 }
 
 .subheader {
@@ -114,6 +119,7 @@ h2 {
 	border-radius: 5px;
 	margin: 0.5em 0;
 	display: grid;
+	box-shadow: var(--low-shadow);
 }
 
 /* .collapsible.closed {
@@ -160,23 +166,77 @@ h2 {
 	overflow: auto;
 } */
 
+.center {
+	margin: 0 auto;
+	max-width: fit-content;
+}
+
+.hidden {
+	display: none;
+}
+
 .image-pane {
-	display: grid;
-	grid-template-columns: auto auto;
-	margin: 2em auto;
-	grid-column-gap: 1em;
-	max-width: 1000px;
-	padding: 0 5vw;
+	position: relative;
+	margin: 2em 10vw;
+	max-width: fit-content;
+}
+
+.image-pane-scroll {
+	padding: 10px 10px;
+	display: flex;
+	flex-direction: row;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	background-color: inherit;
+	border-radius: 5px;
+	align-items: center;
+	box-shadow: var(--low-shadow);
+	scroll-behavior: smooth;
+	max-width: fit-content;
 }
 
 .image-pane.thin {
 	grid-template-columns: auto;
 }
 
-.image-pane>img {
-	width: 100%;
+.image-pane img {
+	height: 15em;
 	border-radius: 5px;
 	margin: 5px;
+	text-align: center;
+	scroll-snap-align: center;
+	flex: none;
+}
+
+.image-pane .prev,
+.image-pane .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.1s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.image-pane .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.image-pane .prev:hover,
+.image-pane .next:hover,
+.image-pane .prev:active,
+.image-pane .next:active {
+	color: white;
+	background-color: rgba(0,0,0,0.8);
 }
 
 .page-pane {
@@ -187,7 +247,7 @@ h2 {
 	background-color: inherit;
 	border-radius: 5px;
 	overflow: hidden;
-	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+	box-shadow: var(--low-shadow);
 }
 
 .page-pane>img {
