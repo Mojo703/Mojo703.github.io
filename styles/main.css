@@ -122,11 +122,6 @@ h2 {
 	box-shadow: var(--low-shadow);
 }
 
-/* .collapsible.closed {
-	overflow: hidden;
-	grid-template-rows: auto 0;
-} */
-
 .collapsible>h3 {
 	margin: 0 0 10px 0;
 	cursor: pointer;
@@ -160,11 +155,6 @@ h2 {
 	overflow: auto;
 	font-size: smaller;
 }
-
-/* .gist .blob-wrapper.data {
-	max-height: 200px;
-	overflow: auto;
-} */
 
 .center {
 	margin: 0 auto;
@@ -269,7 +259,7 @@ h2 {
 	margin-right: 1em;
 }
 
-/* CSS that should be displayed if width is equal to or less than 800px goes here */
+/* CSS that should be displayed if width is equal to or less than 800px (likely mobile screens) goes here */
 @media (max-width: 800px) {
 	html {
 		font-size: 14px;
