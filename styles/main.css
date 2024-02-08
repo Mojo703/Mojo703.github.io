@@ -195,10 +195,6 @@ h2 {
 	max-width: fit-content;
 }
 
-.image-pane.thin {
-	grid-template-columns: auto;
-}
-
 .image-pane img {
 	height: 15em;
 	border-radius: 5px;
@@ -206,6 +202,7 @@ h2 {
 	text-align: center;
 	scroll-snap-align: center;
 	flex: none;
+	max-width: calc(100% - 10px); /* Squishes large images */
 }
 
 .image-pane .prev,
@@ -279,7 +276,7 @@ h2 {
 	}
 
 	.image-pane {
-		grid-template-columns: auto;
+		margin: 2em 0;
 	}
 
 	.page-pane {
