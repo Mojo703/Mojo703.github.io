@@ -24,20 +24,14 @@ ul#class-label > li {
   border-radius: 2px;
 }
 
-#drawing-surface {
-  position: relative;
-  display: inline-block;
-}
-
 #drawing-surface-canvas {
   width: 100%;
   touch-action: none;
+  display: block;
+  margin: auto;
 }
 
 #drawing-surface-clear {
-  position: absolute;
-  top: 0;
-  left: 0;
   margin: 0.75rem;
 }
 
