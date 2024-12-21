@@ -1,173 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./icons/icon.png" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Matthew's Website</title>
-    <link href="./styles/main.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    <script src="./scripts/imagePane.js"></script>
-    <img class="banner" src="images/banner.png" />
-    <h1>Matthew Goodman</h1>
-    <div class="spacer">
-      <div class="content">
-        <div class="navbar">
-          <a href="./index.html"
-            ><img class="inline_icon" src="./icons/home.png" alt="" />Home</a
-          >
-          <a href="./portfolio.html"
-            ><img
-              class="inline_icon"
-              src="./icons/class_projects.png"
-              alt=""
-            />Portfolio</a
-          >
-          <a href="./resume.pdf"
-            ><img
-              class="inline_icon"
-              src="./icons/resume.png"
-              alt=""
-            />Resume</a
-          >
-        </div>
-        <h2>Who am I:</h2>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./icons/icon.png" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Matthew's Website</title>
+  <link href="./styles/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script src="./scripts/imagePane.js"></script>
+  <img class="banner" src="images/banner.png" />
+  <h1>Matthew Goodman</h1>
+  <div class="spacer">
+    <div class="content">
+      <div class="navbar">
+        <a href="./index.html"><img class="inline_icon" src="./icons/home.png" alt="" />Home</a>
+        <a href="./portfolio.html"><img class="inline_icon" src="./icons/class_projects.png" alt="" />Portfolio</a>
+        <a href="./resume.pdf"><img class="inline_icon" src="./icons/resume.png" alt="" />Resume</a>
+      </div>
+      <h2>Who am I:</h2>
+      <p>
+        I am a third year Computer Engineering major at Simon Fraser
+        University. My largest interests are game development, hiking, and
+        reading. I have a passion for solving problems, and I love programming.
+      </p>
+      <p>
+        From my start of building cardboard forts,
+        creating massive popsicle stick boats, and making lightweight gliders,
+        I have progressed to working on game development, mechanical design of
+        soccer playing robots, and studying to become a computer engineer at SFU.
+      </p>
+      <h2>My Projects:</h2>
+      <div class="page-pane">
+        <img src="./images/Digit Recognition.png" alt="Screenshots showing the digit classification client."
+          style="cursor: pointer" onclick="window.location='/projects/Digit Classify/index.html';" />
+        <h3>
+          <a href="/projects/Digit Classify/index.html" target="_blank">Digit Classify<img class="inline_icon"
+              src="./icons/arrow-up.png" alt="" /></a>
+        </h3>
         <p>
-          I am a third year Computer Engineering major at Simon Fraser
-          University. My largest interests are game development, hiking, and
-          reading. I have a passion for bridging the complexity of software,
-          with the art of mechanical design.
+          A personal project. A client-side digit classification system. The page contains a canvas for the user to
+          draw on, which gets classified locally by a convolutional neural network. It runs in real time using a WASM
+          and web worker structure.
         </p>
+      </div>
+      <div class="page-pane">
+        <img src="./images/Frontier/title.png" alt="A screenshot from the Frontier game." style="cursor: pointer"
+          onclick="window.location='./game_frontier.html';" />
+        <h3>
+          <a href="./game_frontier.html">Frontier<img class="inline_icon" src="./icons/arrow-up.png" alt="" /></a>
+        </h3>
         <p>
-          Overtime, my projects have progressed from building cardboard forts,
-          creating massive popsicle stick boats, and making lightweight gliders.
-          In the present, I work on game development, mechanical design of
-          soccer playing robots, and studying to become a computer engineer.
+          A singleplayer management game made in 14 days for the 2024 Pirate
+          Software Game Jam. Read more here, or follow this link to play the
+          game in your browser on
+          <a href="https://tiki720.itch.io/frontier">Itch.io</a>.
         </p>
-        <h2>Major Projects:</h2>
-        <div class="page-pane">
-          <img
-            src="./images/Frontier/title.png"
-            alt="A screenshot from the Frontier game."
-            style="cursor: pointer"
-            onclick="window.location='./game_frontier.html';"
-          />
-          <h3>
-            <a href="./game_frontier.html"
-              >Frontier<img
-                class="inline_icon"
-                src="./icons/arrow-up.png"
-                alt=""
-            /></a>
-          </h3>
-          <p>
-            A singleplayer management game made in 14 days for the 2024 Pirate
-            Software Game Jam. Read more here, or follow this link to play the
-            game in your browser on
-            <a href="https://tiki720.itch.io/frontier">Itch.io</a>.
-          </p>
-        </div>
-        <div class="page-pane">
-          <img
-            src="./images/Cover removed.png"
-            alt="A render of the partially assembled Robot."
-            style="cursor: pointer"
-            onclick="window.location='/robot_soccer.html';"
-          />
-          <h3>
-            <a href="/robot_soccer.html"
-              >Robot Soccer<img
-                class="inline_icon"
-                src="./icons/arrow-up.png"
-                alt=""
-            /></a>
-          </h3>
-          <p>
-            Key member of the mechanics sub-team of the Robot Soccer club at
-            SFU. Our goal is to compete in the 2025 robocup small size league.
-          </p>
-        </div>
-        <div class="page-pane">
-          <img
-            src="./images/Evolution.png"
-            alt="A screenshot from the Evolution game."
-            style="cursor: pointer"
-            onclick="window.location='/projects/Evolution/index.html';"
-          />
-          <h3>
-            <a href="/projects/Evolution/index.html" target="_blank"
-              >Evolution<img
-                class="inline_icon"
-                src="./icons/arrow-up.png"
-                alt=""
-            /></a>
-          </h3>
-          <p>
-            A personal project. A simulation about evolution via natural
-            selection. The creatures brains and bodies evolve as they compete
-            for limited resources. WASD for camera movement, scroll wheel to
-            zoom, and left click for selection (to open the info panel for
-            creatures).
-          </p>
-        </div>
-        <div class="page-pane">
-          <img
-            src="./images/Cooperation_ingame.png"
-            alt="A screenshot from the Evolution game."
-            style="cursor: pointer"
-            onclick="window.location='https:\/\/tiki720.itch.io\/break-it-down';"
-          />
-          <h3>
-            <a href="https://tiki720.itch.io/break-it-down" target="_blank"
-              >Break it Down<img
-                class="inline_icon"
-                src="./icons/arrow-up.png"
-                alt=""
-            /></a>
-          </h3>
-          <p>
-            A personal project, made for a game jam. In the arcade-like puzzle
-            and finesse game, Break it Down, your goal is to deconstruct objects
-            with your AI partner. Choose the right tool for the job, but be
-            quick; you will get less time per deconstruction as the game
-            progresses.
-          </p>
-        </div>
-        <div class="page-pane">
-          <img
-            src="./images/Window/Window (Full).png"
-            alt="A picture of a motorized window."
-            style="cursor: pointer"
-            onclick="window.location='/auto_window.html';"
-          />
-          <h3>
-            <a href="/auto_window.html"
-              >Automatic Window System<img
-                class="inline_icon"
-                src="./icons/arrow-up.png"
-                alt=""
-            /></a>
-          </h3>
-          <p>
-            A group project for the ENSC 100W class at SFU. My team designed an
-            automatic window actuation system, to control a room's temperature
-            using the outside air. It uses an inside temperature sensor,
-            external weather data, and the time of day to control the actuation
-            of a window.
-          </p>
-        </div>
-        <div class="footer">
-          <p>
-            Contact me: mpg3@sfu.ca,
-            <a href="https://www.linkedin.com/in/matthew-goodman-b2a4bb289"
-              >linkedin</a
-            >
-          </p>
-          <p>Updated 2024-01-27</p>
-        </div>
+      </div>
+      <div class="page-pane">
+        <img src="./images/Cover removed.png" alt="A render of the partially assembled Robot." style="cursor: pointer"
+          onclick="window.location='/robot_soccer.html';" />
+        <h3>
+          <a href="/robot_soccer.html">Robot Soccer<img class="inline_icon" src="./icons/arrow-up.png" alt="" /></a>
+        </h3>
+        <p>
+          Key member of the mechanics sub-team of the Robot Soccer club at
+          SFU. Our goal is to compete in the 2025 robocup small size league.
+        </p>
+      </div>
+      <div class="page-pane">
+        <img src="./images/Evolution.png" alt="A screenshot from the Evolution game." style="cursor: pointer"
+          onclick="window.location='/projects/Evolution/index.html';" />
+        <h3>
+          <a href="/projects/Evolution/index.html" target="_blank">Evolution<img class="inline_icon"
+              src="./icons/arrow-up.png" alt="" /></a>
+        </h3>
+        <p>
+          A personal project. A simulation about evolution via natural
+          selection. The creatures brains and bodies evolve as they compete
+          for limited resources. WASD for camera movement, scroll wheel to
+          zoom, and left click for selection (to open the info panel for
+          creatures).
+        </p>
+      </div>
+      <div class="page-pane">
+        <img src="./images/Cooperation_ingame.png" alt="A screenshot from the Evolution game." style="cursor: pointer"
+          onclick="window.location='https:\/\/tiki720.itch.io\/break-it-down';" />
+        <h3>
+          <a href="https://tiki720.itch.io/break-it-down" target="_blank">Break it Down<img class="inline_icon"
+              src="./icons/arrow-up.png" alt="" /></a>
+        </h3>
+        <p>
+          A personal project, made for a game jam. In the arcade-like puzzle
+          and finesse game, Break it Down, your goal is to deconstruct objects
+          with your AI partner. Choose the right tool for the job, but be
+          quick; you will get less time per deconstruction as the game
+          progresses.
+        </p>
+      </div>
+      <div class="page-pane">
+        <img src="./images/Window/Window (Full).png" alt="A picture of a motorized window." style="cursor: pointer"
+          onclick="window.location='/auto_window.html';" />
+        <h3>
+          <a href="/auto_window.html">Automatic Window System<img class="inline_icon" src="./icons/arrow-up.png"
+              alt="" /></a>
+        </h3>
+        <p>
+          A group project for the ENSC 100W class at SFU. My team designed an
+          automatic window actuation system, to control a room's temperature
+          using the outside air. It uses an inside temperature sensor,
+          external weather data, and the time of day to control the actuation
+          of a window.
+        </p>
+      </div>
+      <div class="footer">
+        <p>
+          mpg3@sfu.ca,
+          <a href="https://www.linkedin.com/in/matthew-goodman-b2a4bb289">linkedin</a>
+        </p>
+        <p>Updated 2024-12-21</p>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

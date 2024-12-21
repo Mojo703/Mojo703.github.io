@@ -1,182 +1,167 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./icons/icon.png" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Matthew's Portfolio</title>
-    <link href="./styles/main.css" rel="stylesheet" type="text/css" />
-    <link href="./styles/sections.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    <script src="./scripts/collapser.js"></script>
-    <script src="./scripts/sectioner.js"></script>
-    <script src="./scripts/imagePane.js"></script>
-    <img class="banner" src="./images/banner.png" />
-    <h1>Matthew's Portfolio</h1>
-    <div id="sections">
-      <span>Jump To</span>
-      <div id="section-list"></div>
-    </div>
-    <div class="spacer">
-      <div class="content">
-        <div class="navbar">
-          <a href="./index.html"
-            ><img class="inline_icon" src="./icons/home.png" alt="" />Home</a
-          >
-          <a href="./portfolio.html"
-            ><img
-              class="inline_icon"
-              src="./icons/class_projects.png"
-              alt=""
-            />Portfolio</a
-          >
-          <a href="./resume.pdf"
-            ><img
-              class="inline_icon"
-              src="./icons/resume.png"
-              alt=""
-            />Resume</a
-          >
-        </div>
-        <h2 short="Robot Soccer">Robot Soccer Mechanics Team</h2>
-        <p>
-          Designed to compete in the 2024
-          <a href="https://ssl.robocup.org/">robocup small size league</a>. Our
-          team's website is
-          <a href="https://www.sfurobotsoccer.com/">SFU Robot Soccer</a>
-        </p>
-        <p>
-          I rendered the robot soccer mechanical components in SolidWorks. I
-          have personally designed or revised many of the mechanical components
-          of the robot, most notably the spiral-shaped dribbler, its drive train
-          assembly, the horizontal structural plates, and the main mounting
-          brackets.
-        </p>
-        <p>
-          The team's prototyping is done with 3D printing since it is rapid and
-          strong enough to do limited testing. To meet our goals, I printed the
-          yellow parts with PETG.
-        </p>
-        <div class="center">
-          <div class="image-pane">
-            <div class="image-pane-scroll">
-              <img src="./images/Cover removed.png" />
-              <img src="./images/Dissasembled Robot.png" />
-              <img src="./images/Dribbler Assembly.png" />
-              <img src="./images/Full render.png" />
-              <img src="./images/Kicker.png" />
-              <img src="./images/Dissasembled Robot 2.png" />
-            </div>
-          </div>
-        </div>
-        <h2 short="Software">Personal Software Projects</h2>
-        <p>
-          Below are some screenshots of my game development projects. The first
-          image showcases a fog of war shaders and robust selection tools. The
-          second is a game with fully developed gameplay. And finally, the third
-          project was developed with my friends, with a limited colour palette
-          and procedural animations.
-        </p>
-        <div class="center">
-          <div class="image-pane">
-            <div class="image-pane-scroll">
-              <img src="./images/Solar Belt.png" />
-              <img src="./images/Cooperation.png" />
-              <img src="./images/Group Project.png" />
-            </div>
-          </div>
-        </div>
-        <h2 short="Code Samples">Code Samples</h2>
-        <p>
-          Below are some code samples for several languages I have learned. They
-          are files taken from some of my projects.
-        </p>
-        <div class="collapsible closed">
-          <h3 class="collapser">JavaScript: Evolution project.</h3>
-          <script src="https://gist.github.com/Mojo703/4c4558e85b1816ca14689754d6322eec.js"></script>
-        </div>
-        <div class="collapsible closed">
-          <h3 class="collapser">C#: Unity game project.</h3>
-          <script src="https://gist.github.com/Mojo703/19a13c2bb5eed3f46a02995b6add66e2.js"></script>
-        </div>
-        <div class="collapsible closed">
-          <h3 class="collapser">MATLAB: Stock plotter.</h3>
-          <script src="https://gist.github.com/Mojo703/cec130a04f755f2255418c24ed04f8a9.js"></script>
-        </div>
-        <div class="collapsible closed">
-          <h3 class="collapser">VHDL: Alarm system.</h3>
-          <script src="https://gist.github.com/Mojo703/eb519629244808fcecee608ca5d7f94f.js"></script>
-        </div>
-        <p>
-          This website is a good example of my skill with HTML, JS, and CSS.
-        </p>
-        <h2 short="Class Projects">Class Projects</h2>
-        <p>
-          The first image is a hand-soldered digital dice circuit (for the SFU
-          class ENSC 220) with through-hole and surface mount components. The
-          end result simulates rolling a die when you press the capacitive
-          button.
-        </p>
-        <p>
-          The second and third images are of an automatic window actuation
-          system controlled by weather forecast (for the SFU classes ENSC 100
-          and ENSC 105W). The project was completed from the ground up in a
-          small team, with the goal of solving a problem we encounter in the
-          world.
-        </p>
-        <div class="center">
-          <div class="image-pane">
-            <div class="image-pane-scroll">
-              <img src="./images/soldering.png" />
-              <img src="./images/auto window circuit.png" />
-              <img src="./images/auto window.png" />
-            </div>
-          </div>
-        </div>
-        <h2 short="Mechanical">Personal Mechanical Projects</h2>
-        <p>
-          These images show some iterations of a tiny pocket-watch-like
-          mechanism. As a design requirement, 3D printing was the manufacturing
-          method.
-        </p>
-        <div class="center">
-          <div class="image-pane">
-            <div class="image-pane-scroll">
-              <img src="./images/watch escapement.png" />
-              <img src="./images/gear test 2.png" />
-              <img src="./images/gear test.png" />
-              <img src="./images/watch escapement early.png" />
-            </div>
-          </div>
-        </div>
-        <p>Below are a few photos of some old and small personal projects:</p>
-        <ul>
-          <li>Prototypes for a mechanical iris mechanism.</li>
-          <li>A mechanism that follows the same motion as a Strandbeest.</li>
-          <li>And a practical set of hangers for the back of my old door.</li>
-        </ul>
-        <div class="center">
-          <div class="image-pane">
-            <div class="image-pane-scroll">
-              <img src="./images/Mini Projects/Iris.jpg" />
-              <img src="./images/Mini Projects/Strandbeest.jpg" />
-              <img src="./images/Mini Projects/Door Hangers.jpg" />
-            </div>
-          </div>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./icons/icon.png" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Matthew's Portfolio</title>
+  <link href="./styles/main.css" rel="stylesheet" type="text/css" />
+  <link href="./styles/sections.css" rel="stylesheet" type="text/css" />
+</head>
 
-        <div class="footer">
-          <p>
-            Contact me: mpg3@sfu.ca,
-            <a href="https://www.linkedin.com/in/matthew-goodman-b2a4bb289"
-              >linkedin</a
-            >
-          </p>
-          <p>Updated 2024-01-27</p>
+<body>
+  <script src="./scripts/collapser.js"></script>
+  <script src="./scripts/sectioner.js"></script>
+  <script src="./scripts/imagePane.js"></script>
+  <img class="banner" src="./images/banner.png" />
+  <h1>Matthew's Portfolio</h1>
+  <div id="sections">
+    <span>Jump To</span>
+    <div id="section-list"></div>
+  </div>
+  <div class="spacer">
+    <div class="content">
+      <div class="navbar">
+        <a href="./index.html"><img class="inline_icon" src="./icons/home.png" alt="" />Home</a>
+        <a href="./portfolio.html"><img class="inline_icon" src="./icons/class_projects.png" alt="" />Portfolio</a>
+        <a href="./resume.pdf"><img class="inline_icon" src="./icons/resume.png" alt="" />Resume</a>
+      </div>
+      <h2 short="Robot Soccer">Robot Soccer Mechanics Team</h2>
+      <p>
+        Designed to compete in the 2024
+        <a href="https://ssl.robocup.org/">robocup small size league</a>. Our
+        team's website is
+        <a href="https://www.sfurobotsoccer.com/">SFU Robot Soccer</a>
+      </p>
+      <p>
+        I rendered the robot soccer mechanical components in SolidWorks. I
+        have personally designed or revised many of the mechanical components
+        of the robot, most notably the spiral-shaped dribbler, its drive train
+        assembly, the horizontal structural plates, and the main mounting
+        brackets.
+      </p>
+      <p>
+        The team's prototyping is done with 3D printing since it is rapid and
+        strong enough to do limited testing. To meet our goals, I printed the
+        yellow parts with PETG.
+      </p>
+      <div class="center">
+        <div class="image-pane">
+          <div class="image-pane-scroll">
+            <img src="./images/Cover removed.png" />
+            <img src="./images/Dissasembled Robot.png" />
+            <img src="./images/Dribbler Assembly.png" />
+            <img src="./images/Full render.png" />
+            <img src="./images/Kicker.png" />
+            <img src="./images/Dissasembled Robot 2.png" />
+          </div>
         </div>
       </div>
+      <h2 short="Software">Personal Software Projects</h2>
+      <p>
+        Below are some screenshots of my game development projects. The first
+        image showcases a fog of war shaders and robust selection tools. The
+        second is a game with fully developed gameplay. And finally, the third
+        project was developed with my friends, with a limited colour palette
+        and procedural animations.
+      </p>
+      <div class="center">
+        <div class="image-pane">
+          <div class="image-pane-scroll">
+            <img src="./images/Solar Belt.png" />
+            <img src="./images/Cooperation.png" />
+            <img src="./images/Group Project.png" />
+          </div>
+        </div>
+      </div>
+      <h2 short="Code Samples">Code Samples</h2>
+      <p>
+        Below are some code samples for several languages I have learned. They
+        are files taken from some of my projects.
+      </p>
+      <div class="collapsible closed">
+        <h3 class="collapser">JavaScript: Evolution project.</h3>
+        <script src="https://gist.github.com/Mojo703/4c4558e85b1816ca14689754d6322eec.js"></script>
+      </div>
+      <div class="collapsible closed">
+        <h3 class="collapser">C#: Unity game project.</h3>
+        <script src="https://gist.github.com/Mojo703/19a13c2bb5eed3f46a02995b6add66e2.js"></script>
+      </div>
+      <div class="collapsible closed">
+        <h3 class="collapser">MATLAB: Stock plotter.</h3>
+        <script src="https://gist.github.com/Mojo703/cec130a04f755f2255418c24ed04f8a9.js"></script>
+      </div>
+      <div class="collapsible closed">
+        <h3 class="collapser">VHDL: Alarm system.</h3>
+        <script src="https://gist.github.com/Mojo703/eb519629244808fcecee608ca5d7f94f.js"></script>
+      </div>
+      <p>
+        This website is a good example of my skill with HTML, JS, and CSS.
+      </p>
+      <h2 short="Class Projects">Class Projects</h2>
+      <p>
+        The first image is a hand-soldered digital dice circuit (for the SFU
+        class ENSC 220) with through-hole and surface mount components. The
+        end result simulates rolling a die when you press the capacitive
+        button.
+      </p>
+      <p>
+        The second and third images are of an automatic window actuation
+        system controlled by weather forecast (for the SFU classes ENSC 100
+        and ENSC 105W). The project was completed from the ground up in a
+        small team, with the goal of solving a problem we encounter in the
+        world.
+      </p>
+      <div class="center">
+        <div class="image-pane">
+          <div class="image-pane-scroll">
+            <img src="./images/soldering.png" />
+            <img src="./images/auto window circuit.png" />
+            <img src="./images/auto window.png" />
+          </div>
+        </div>
+      </div>
+      <h2 short="Mechanical">Personal Mechanical Projects</h2>
+      <p>
+        These images show some iterations of a tiny pocket-watch-like
+        mechanism. As a design requirement, 3D printing was the manufacturing
+        method.
+      </p>
+      <div class="center">
+        <div class="image-pane">
+          <div class="image-pane-scroll">
+            <img src="./images/watch escapement.png" />
+            <img src="./images/gear test 2.png" />
+            <img src="./images/gear test.png" />
+            <img src="./images/watch escapement early.png" />
+          </div>
+        </div>
+      </div>
+      <p>Below are a few photos of some old and small personal projects:</p>
+      <ul>
+        <li>Prototypes for a mechanical iris mechanism.</li>
+        <li>A mechanism that follows the same motion as a Strandbeest.</li>
+        <li>And a practical set of hangers for the back of my old door.</li>
+      </ul>
+      <div class="center">
+        <div class="image-pane">
+          <div class="image-pane-scroll">
+            <img src="./images/Mini Projects/Iris.jpg" />
+            <img src="./images/Mini Projects/Strandbeest.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          mpg3@sfu.ca,
+          <a href="https://www.linkedin.com/in/matthew-goodman-b2a4bb289">linkedin</a>
+        </p>
+        <p>Updated 2024-01-27</p>
+      </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -1,0 +1,46 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color-scheme: light dark;
+  background-color: Canvas;
+  color: CanvasText;
+}
+
+ul#class-label {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 5px;
+  padding: 0;
+  gap: 1px;
+  justify-content: center;
+}
+
+ul#class-label > li {
+  width: 2em;
+  height: 2em;
+  color: attr(class-color);
+  text-align: center;
+  align-content: center;
+  border-radius: 2px;
+}
+
+#drawing-surface {
+  position: relative;
+  display: inline-block;
+}
+
+#drawing-surface-canvas {
+  width: 100%;
+  touch-action: none;
+}
+
+#drawing-surface-clear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0.75rem;
+}
+
+#app {
+  text-align: center;
+}
