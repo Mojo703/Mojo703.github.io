@@ -26,7 +26,6 @@ ul#class-label > li {
 
 #drawing-surface-canvas {
   width: 100%;
-  touch-action: none;
   display: block;
   margin: auto;
 }
