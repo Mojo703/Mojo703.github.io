@@ -28,6 +28,7 @@ ul#class-label > li {
   width: 100%;
   display: block;
   margin: auto;
+  touch-action: none;
 }
 
 #drawing-surface-clear {
