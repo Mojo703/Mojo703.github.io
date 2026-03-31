@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Digit Classify</title>
+
+  <link rel="stylesheet" href="./index-87a5bd3f28dd521e.css"
+    integrity="sha384&#x2D;h75ar8Blda&#x2F;LK7ghwS4DZuakCh2K08Pp&#x2F;0q&#x2F;FbqHOLXQictHcjuYOs2zgYiV&#x2B;cas" />
+
+
+  <script type="module" nonce="GfXqJtq0RvKznd3rtdx1yg==">
+    import init, * as bindings from './app-e3a7d797c6ea9bf1.js';
+    const wasm = await init({ module_or_path: './app-e3a7d797c6ea9bf1_bg.wasm' });
+
+
+    window.wasmBindings = bindings;
+
+
+    dispatchEvent(new CustomEvent("TrunkApplicationStarted", { detail: { wasm } }));
+
+  </script>
+
+
+
+  <link rel="modulepreload" href="./app-e3a7d797c6ea9bf1.js" crossorigin=anonymous
+    integrity="sha384-wDC/y31Ka5r8EtpeB21P6x5uT3lA4vcWekOBkT6GezKIkr7Un+RTQkyslMZa3LBF">
+  <link rel="preload" href="./app-e3a7d797c6ea9bf1_bg.wasm" crossorigin=anonymous
+    integrity="sha384-4CgixCVdMqkoN66Wb2eCYiJb8OldG2YsJYLVRR11ry1T7DZS5UHPp2qF8ODWUtxF" as="fetch"
+    type="application/wasm">
+</head>
+
+<body></body>
+
+</html>

@@ -1,0 +1,71 @@
+:root {
+	--low-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+	--high-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+	--accent: #f1c232;
+	--accent-hover: #e6ab2e;
+	--nav-bg: #272b3c;
+	--nav-bg-hover: #3c4158;
+	--bg: #161e03;
+	--content-bg: #ffffffe3;
+}
+
+html {
+	background-color: var(--bg);
+}
+
+html,
+body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: Consolas, monaco, monospace;
+}
+
+h2 {
+	background-color: var(--accent);
+	color: white;
+	padding: 0 10px;
+	text-align: center;
+	border-radius: 5px;
+	border: none;
+	box-shadow: var(--low-shadow);
+}
+
+.content > p,
+.content > ul {
+	margin: 0.5em 5vw;
+	text-indent: 1.5em;
+}
+
+.center {
+	margin: 0 auto;
+	max-width: fit-content;
+}
+
+.hidden {
+	display: none;
+}
+
+.inline_icon {
+	display: inline;
+	margin: 0 0.15em;
+	padding: 0;
+	vertical-align: baseline;
+	height: 1.5ex;
+}
+
+@media (max-width: 800px) {
+	html {
+		font-size: 14px;
+	}
+}
