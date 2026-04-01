@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import Icon from './Icon.svelte';
+	import type { Snippet } from "svelte";
+	import Icon from "./Icon.svelte";
 
 	let {
 		image,
-		alt = '',
+		alt = "",
 		title,
 		href,
 		external = false,
-		children
+		children,
 	}: {
 		image: string;
 		alt?: string;
@@ -20,92 +20,113 @@
 </script>
 
 <div class="page-pane">
-	<a class="pane-image-link" {href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
-		<img src={image} {alt} />
-	</a>
-	<h3>
-		<a {href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
+	<h3 class="pane-header">
+		<a
+			{href}
+			target={external ? "_blank" : undefined}
+			rel={external ? "noopener noreferrer" : undefined}
+		>
 			{title}<Icon name="external" size={14} />
 		</a>
 	</h3>
-	<p>{@render children()}</p>
+	<div class="pane-body">
+		<a
+			class="pane-image-link"
+			{href}
+			target={external ? "_blank" : undefined}
+			rel={external ? "noopener noreferrer" : undefined}
+		>
+			<img src={image} {alt} />
+		</a>
+		<p>{@render children()}</p>
+	</div>
 </div>
 
 <style>
 	.page-pane {
-		display: grid;
-		grid-template-columns: 1fr 3fr;
-		grid-template-rows: min-content 1fr;
-		margin: 20px;
-		border-radius: 3px;
-		overflow: hidden;
+		margin: 1.2em 10px;
+		border-radius: 2px;
 		background-color: var(--bg-surface-raised);
-		border: 1px solid var(--border-edge);
-		box-shadow:
-			var(--panel-shadow),
-			var(--panel-highlight),
-			var(--panel-depth);
-		transition: box-shadow 50ms ease, transform 50ms ease;
+		border: 4px solid transparent;
+		border-image: var(--bevel-border) 4 fill;
+		box-shadow: var(--panel-shadow);
+		transition:
+			box-shadow 50ms ease,
+			transform 50ms ease;
 	}
 
 	.page-pane:hover {
 		transform: translateY(-1px);
-		box-shadow:
-			0 4px 16px rgba(0, 0, 0, 0.25),
-			var(--panel-highlight),
-			var(--panel-depth);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 	}
 
-	.page-pane > .pane-image-link {
-		grid-row: 1 / span 2;
+	.pane-header {
+		margin: 0;
+		padding: 6px 12px;
+		font-size: 1.05em;
+		font-weight: 700;
+		background-color: var(--bg-surface-inset);
+		border-bottom: 1px solid var(--border-edge);
+		box-shadow: var(--inset-shadow), var(--inset-highlight);
 	}
 
-	.page-pane > .pane-image-link > img {
-		width: 100%;
-		display: block;
+	.pane-header > a {
+		color: var(--panel-header-text);
+		text-decoration: none;
 	}
 
-	.page-pane > h3 {
-		border-bottom: 2.5px solid var(--accent);
-		width: max-content;
-		display: block;
-		margin: 5px 1em;
-		color: var(--text-heading);
-	}
-
-	.page-pane > h3 > a {
-		color: inherit;
-		text-decoration: inherit;
-	}
-
-	.page-pane > h3 > a:hover {
+	.pane-header > a:hover {
 		color: var(--accent);
+		text-decoration: none;
 	}
 
-	.page-pane > p {
-		margin-left: 1em;
-		margin-right: 1em;
+	.pane-body {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 12px;
+		padding: 12px;
+		background-color: var(--panel-header-bg);
+		align-items: center;
+	}
+
+	.pane-image-link {
+		display: block;
+		border-radius: 2px;
+		padding: 3px;
+		background-color: var(--bg-surface-inset);
+		border: 1px solid var(--border-edge);
+		box-shadow: var(--inset-shadow), var(--inset-highlight);
+	}
+
+	.pane-image-link > img {
+		width: 100%;
+		max-width: 250px;
+		display: block;
+		border-radius: 1px;
+	}
+
+	.pane-body > p {
+		margin: 0.4em 0.5em;
 		color: var(--text-secondary);
 	}
 
 	@media (max-width: 800px) {
-		.page-pane {
+		.pane-body {
 			display: block;
 			text-align: center;
 		}
 
-		.page-pane > .pane-image-link > img {
-			max-width: 300px;
+		.pane-image-link {
+			display: inline-block;
 		}
 
-		.page-pane > h3 {
-			margin: auto;
+		.pane-image-link > img {
+			max-width: 280px;
 		}
 
-		.page-pane > p {
+		.pane-body > p {
 			text-align: justify;
-			margin-left: 2em;
-			margin-right: 2em;
+			margin: 1em 1.5em;
 		}
 	}
 </style>

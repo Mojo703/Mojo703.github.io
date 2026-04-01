@@ -3,7 +3,7 @@
 
 	let scrollContainer: HTMLDivElement;
 	let showPrev = $state(false);
-	let showNext = $state(true);
+	let showNext = $state(false);
 
 	const SCROLL_AMOUNT = 240;
 
@@ -11,18 +11,31 @@
 		scrollContainer.scrollLeft += SCROLL_AMOUNT * direction;
 	}
 
-	function handleScroll() {
+	function updateButtons() {
+		if (!scrollContainer) return;
 		const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
 		showPrev = scrollContainer.scrollLeft > 0;
-		showNext = scrollContainer.scrollLeft < maxScroll;
+		showNext = maxScroll > 1 && scrollContainer.scrollLeft < maxScroll;
 	}
+
+	function onImageLoad() {
+		updateButtons();
+	}
+
+	$effect(() => {
+		if (!scrollContainer) return;
+		updateButtons();
+		const observer = new ResizeObserver(() => updateButtons());
+		observer.observe(scrollContainer);
+		return () => observer.disconnect();
+	});
 </script>
 
 <div class="center">
 	<div class="image-pane">
-		<div class="image-pane-scroll" bind:this={scrollContainer} onscroll={handleScroll}>
+		<div class="image-pane-scroll" bind:this={scrollContainer} onscroll={updateButtons}>
 			{#each images as src}
-				<img {src} alt="" />
+				<img {src} alt="" onload={onImageLoad} />
 			{/each}
 		</div>
 		{#if showPrev}
@@ -99,10 +112,13 @@
 	}
 
 	.prev:hover,
-	.next:hover {
+	.next:hover,
+	.prev:focus-visible,
+	.next:focus-visible {
 		color: white;
 		background-color: var(--accent);
 		box-shadow: var(--btn-hover-shadow);
+		outline: none;
 	}
 
 	.prev:active,

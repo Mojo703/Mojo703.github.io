@@ -40,11 +40,13 @@
 		transition: box-shadow 50ms ease, color 50ms ease, background-color 50ms ease;
 	}
 
-	.navbar > a:hover {
+	.navbar > a:hover,
+	.navbar > a:focus-visible {
 		background-color: var(--nav-bg-hover);
 		color: var(--accent);
 		text-decoration: none;
 		box-shadow: var(--btn-hover-shadow);
+		outline: none;
 	}
 
 	.navbar > a:active {
