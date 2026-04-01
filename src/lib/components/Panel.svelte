@@ -33,26 +33,29 @@
 
 	.panel-header {
 		margin: 0;
-		padding: 6px 12px;
+		padding: 8px 12px;
 		font-size: 1.1em;
 		font-weight: 700;
-		color: var(--panel-header-text);
-		background-color: var(--bg-surface-inset);
-		border-bottom: 1px solid var(--border-edge);
+		color: var(--text-heading);
 		text-align: left;
 		border-radius: 0;
-		box-shadow: var(--inset-shadow), var(--inset-highlight);
 		border-image: none;
+		background: none;
+		box-shadow: none;
 	}
 
 	.panel-body {
-		padding: 10px 4px;
-		background-color: var(--panel-header-bg);
+		margin: 0 8px 8px 8px;
+		padding: 10px 12px;
+		background-color: var(--bg-surface-inset);
+		border: 4px solid transparent;
+		border-image: var(--inset-bevel-border) 4 fill;
+		box-shadow: var(--inset-shadow), var(--inset-highlight);
 	}
 
 	.panel-body > :global(p),
 	.panel-body > :global(ul) {
-		margin: 0.6em 1em;
+		margin: 0.6em 0.5em;
 	}
 
 	.panel-body > :global(p:first-child) {

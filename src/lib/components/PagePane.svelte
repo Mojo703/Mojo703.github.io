@@ -44,7 +44,7 @@
 
 <style>
 	.page-pane {
-		margin: 1.2em 10px;
+		margin: 0 0 8px 0;
 		border-radius: 2px;
 		background-color: var(--bg-surface-raised);
 		border: 4px solid transparent;
@@ -65,13 +65,14 @@
 		padding: 6px 12px;
 		font-size: 1.05em;
 		font-weight: 700;
-		background-color: var(--bg-surface-inset);
-		border-bottom: 1px solid var(--border-edge);
-		box-shadow: var(--inset-shadow), var(--inset-highlight);
+		color: var(--text-heading);
+		background: none;
+		box-shadow: none;
+		border-image: none;
 	}
 
 	.pane-header > a {
-		color: var(--panel-header-text);
+		color: inherit;
 		text-decoration: none;
 	}
 
@@ -84,16 +85,20 @@
 		display: grid;
 		grid-template-columns: auto 1fr;
 		gap: 12px;
+		margin: 0 8px 8px 8px;
 		padding: 12px;
-		background-color: var(--panel-header-bg);
+		background-color: var(--bg-surface-inset);
+		border: 4px solid transparent;
+		border-image: var(--inset-bevel-border) 4 fill;
+		box-shadow: var(--inset-shadow), var(--inset-highlight);
 		align-items: center;
 	}
 
 	.pane-image-link {
 		display: block;
 		border-radius: 2px;
-		padding: 3px;
-		background-color: var(--bg-surface-inset);
+		padding: 4px;
+		background-color: var(--bg-surface);
 		border: 1px solid var(--border-edge);
 		box-shadow: var(--inset-shadow), var(--inset-highlight);
 	}
