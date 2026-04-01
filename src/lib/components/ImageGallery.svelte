@@ -84,13 +84,13 @@
 		padding: 8px;
 		font-weight: bold;
 		font-size: 18px;
-		transition: background-color 0.15s ease, color 0.15s ease;
+		transition: box-shadow 50ms ease, color 50ms ease, background-color 50ms ease, padding 50ms ease;
 		border-radius: 0 3px 3px 0;
 		user-select: none;
 		border: none;
 		color: var(--text-primary);
 		background-color: var(--bg-surface);
-		box-shadow: var(--panel-shadow);
+		box-shadow: var(--panel-shadow), var(--btn-highlight), var(--btn-depth);
 	}
 
 	.next {
@@ -99,11 +99,19 @@
 	}
 
 	.prev:hover,
-	.next:hover,
+	.next:hover {
+		color: white;
+		background-color: var(--accent);
+		box-shadow: var(--btn-hover-shadow);
+	}
+
 	.prev:active,
 	.next:active {
 		color: white;
 		background-color: var(--accent);
+		padding-top: 10px;
+		padding-bottom: 6px;
+		box-shadow: var(--btn-active-shadow);
 	}
 
 	@media (max-width: 800px) {

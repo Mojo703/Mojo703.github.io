@@ -33,16 +33,24 @@
 		border: none;
 		cursor: pointer;
 		color: var(--nav-text);
-		padding: 6px;
+		padding: 6px 10px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		border-radius: 3px;
-		transition: color 0.15s ease, background-color 0.15s ease;
+		border-radius: 0;
+		box-shadow: var(--btn-highlight), var(--btn-depth);
+		transition: box-shadow 50ms ease, color 50ms ease, background-color 50ms ease;
 	}
 
 	.theme-toggle:hover {
 		color: var(--accent);
 		background-color: var(--nav-bg-hover);
+		box-shadow: var(--btn-hover-shadow);
+	}
+
+	.theme-toggle:active {
+		padding-top: 8px;
+		padding-bottom: 4px;
+		box-shadow: var(--btn-active-shadow);
 	}
 </style>

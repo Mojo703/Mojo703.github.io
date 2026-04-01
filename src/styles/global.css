@@ -34,11 +34,22 @@
 	--inset-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
 	--inset-highlight: inset -1px -1px 0 rgba(255, 255, 255, 0.5);
 
+	/* Button 3D Effects */
+	--btn-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+	--btn-depth: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	--btn-hover-shadow:
+		inset 6px 0 4px -6px rgba(0, 0, 0, 0.15),
+		inset -6px 0 4px -6px rgba(0, 0, 0, 0.15),
+		inset 0 6px 3px -5px rgba(255, 255, 255, 0.25),
+		inset 0 -6px 4px -6px rgba(0, 0, 0, 0.2);
+	--btn-active-shadow:
+		inset 4px 0 4px -4px rgba(0, 0, 0, 0.25),
+		inset -4px 0 4px -4px rgba(0, 0, 0, 0.25),
+		inset 0 4px 4px -3px rgba(0, 0, 0, 0.3),
+		inset 0 -2px 2px -2px rgba(255, 255, 255, 0.1);
+
 	/* Banner */
 	--banner-brightness: 1;
-
-	/* Icon filter (no-op in light mode) */
-	--icon-filter: none;
 }
 
 /* ===== Dark Mode (system preference) ===== */
@@ -71,9 +82,20 @@
 		--inset-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5);
 		--inset-highlight: inset -1px -1px 0 rgba(255, 255, 255, 0.04);
 
-		--banner-brightness: 0.7;
+		--btn-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+		--btn-depth: inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+		--btn-hover-shadow:
+			inset 6px 0 4px -6px rgba(0, 0, 0, 0.3),
+			inset -6px 0 4px -6px rgba(0, 0, 0, 0.3),
+			inset 0 6px 3px -5px rgba(255, 255, 255, 0.08),
+			inset 0 -6px 4px -6px rgba(0, 0, 0, 0.4);
+		--btn-active-shadow:
+			inset 4px 0 4px -4px rgba(0, 0, 0, 0.5),
+			inset -4px 0 4px -4px rgba(0, 0, 0, 0.5),
+			inset 0 4px 4px -3px rgba(0, 0, 0, 0.6),
+			inset 0 -2px 2px -2px rgba(255, 255, 255, 0.05);
 
-		--icon-filter: brightness(0) invert(1);
+		--banner-brightness: 0.7;
 	}
 }
 
@@ -106,9 +128,20 @@
 	--inset-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5);
 	--inset-highlight: inset -1px -1px 0 rgba(255, 255, 255, 0.04);
 
-	--banner-brightness: 0.7;
+	--btn-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	--btn-depth: inset 0 -1px 0 rgba(0, 0, 0, 0.4);
+	--btn-hover-shadow:
+		inset 6px 0 4px -6px rgba(0, 0, 0, 0.3),
+		inset -6px 0 4px -6px rgba(0, 0, 0, 0.3),
+		inset 0 6px 3px -5px rgba(255, 255, 255, 0.08),
+		inset 0 -6px 4px -6px rgba(0, 0, 0, 0.4);
+	--btn-active-shadow:
+		inset 4px 0 4px -4px rgba(0, 0, 0, 0.5),
+		inset -4px 0 4px -4px rgba(0, 0, 0, 0.5),
+		inset 0 4px 4px -3px rgba(0, 0, 0, 0.6),
+		inset 0 -2px 2px -2px rgba(255, 255, 255, 0.05);
 
-	--icon-filter: brightness(0) invert(1);
+	--banner-brightness: 0.7;
 }
 
 /* ===== Explicit Light Override ===== */
@@ -140,9 +173,20 @@
 	--inset-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
 	--inset-highlight: inset -1px -1px 0 rgba(255, 255, 255, 0.5);
 
-	--banner-brightness: 1;
+	--btn-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+	--btn-depth: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	--btn-hover-shadow:
+		inset 6px 0 4px -6px rgba(0, 0, 0, 0.15),
+		inset -6px 0 4px -6px rgba(0, 0, 0, 0.15),
+		inset 0 6px 3px -5px rgba(255, 255, 255, 0.25),
+		inset 0 -6px 4px -6px rgba(0, 0, 0, 0.2);
+	--btn-active-shadow:
+		inset 4px 0 4px -4px rgba(0, 0, 0, 0.25),
+		inset -4px 0 4px -4px rgba(0, 0, 0, 0.25),
+		inset 0 4px 4px -3px rgba(0, 0, 0, 0.3),
+		inset 0 -2px 2px -2px rgba(255, 255, 255, 0.1);
 
-	--icon-filter: none;
+	--banner-brightness: 1;
 }
 
 /* ===== Base Styles ===== */
@@ -210,14 +254,6 @@ a:hover {
 	display: none;
 }
 
-.inline_icon {
-	display: inline;
-	margin: 0 0.15em;
-	padding: 0;
-	vertical-align: baseline;
-	height: 1.5ex;
-	filter: var(--icon-filter);
-}
 
 /* Scrollbar */
 ::-webkit-scrollbar {

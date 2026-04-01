@@ -35,7 +35,7 @@
 		box-shadow:
 			var(--inset-shadow),
 			var(--inset-highlight);
-		transition: background-color 0.15s ease;
+		transition: background-color 50ms ease;
 	}
 
 	.collapsible:hover {

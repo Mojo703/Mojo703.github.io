@@ -57,15 +57,24 @@
 	}
 
 	#sections > div > a {
-		padding: 2px 10px;
+		padding: 4px 10px;
 		display: block;
 		background-color: var(--accent);
 		color: white;
 		text-decoration: none;
+		box-shadow: var(--btn-highlight), var(--btn-depth);
+		transition: box-shadow 50ms ease, background-color 50ms ease, padding 50ms ease;
 	}
 
 	#sections > div > a:hover {
 		background-color: var(--accent-hover);
 		text-decoration: none;
+		box-shadow: var(--btn-hover-shadow);
+	}
+
+	#sections > div > a:active {
+		padding-top: 6px;
+		padding-bottom: 2px;
+		box-shadow: var(--btn-active-shadow);
 	}
 </style>

@@ -1,11 +1,12 @@
 <script lang="ts">
+	import Icon from './Icon.svelte';
 	import ThemeToggle from './ThemeToggle.svelte';
 </script>
 
 <nav class="navbar">
-	<a href="/"><img class="inline_icon" src="/icons/home.png" alt="" />Home</a>
-	<a href="/portfolio"><img class="inline_icon" src="/icons/class_projects.png" alt="" />Portfolio</a>
-	<a href="/resume.pdf"><img class="inline_icon" src="/icons/resume.png" alt="" />Resume</a>
+	<a href="/"><Icon name="home" />Home</a>
+	<a href="/portfolio"><Icon name="portfolio" />Portfolio</a>
+	<a href="/resume.pdf"><Icon name="resume" />Resume</a>
 	<ThemeToggle />
 </nav>
 
@@ -27,20 +28,28 @@
 	}
 
 	.navbar > :global(*) {
-		padding: 4px 1px;
+		padding: 6px 1px;
 	}
 
 	.navbar > a {
 		color: var(--nav-text);
 		text-decoration: none;
 		border-right: 1px solid var(--border-edge);
-		transition: background-color 0.15s ease, color 0.15s ease;
+		font-weight: 600;
+		box-shadow: var(--btn-highlight), var(--btn-depth);
+		transition: box-shadow 50ms ease, color 50ms ease, background-color 50ms ease;
 	}
 
-	.navbar > a:hover,
-	.navbar > a:active {
+	.navbar > a:hover {
 		background-color: var(--nav-bg-hover);
 		color: var(--accent);
 		text-decoration: none;
+		box-shadow: var(--btn-hover-shadow);
+	}
+
+	.navbar > a:active {
+		padding-top: 8px;
+		padding-bottom: 4px;
+		box-shadow: var(--btn-active-shadow);
 	}
 </style>

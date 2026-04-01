@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
+	import Icon from './Icon.svelte';
 
 	let {
 		image,
@@ -24,7 +25,7 @@
 	</a>
 	<h3>
 		<a {href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>
-			{title}<img class="inline_icon" src="/icons/arrow-up.png" alt="" />
+			{title}<Icon name="external" size={14} />
 		</a>
 	</h3>
 	<p>{@render children()}</p>
@@ -44,7 +45,7 @@
 			var(--panel-shadow),
 			var(--panel-highlight),
 			var(--panel-depth);
-		transition: box-shadow 0.2s ease, transform 0.2s ease;
+		transition: box-shadow 50ms ease, transform 50ms ease;
 	}
 
 	.page-pane:hover {
