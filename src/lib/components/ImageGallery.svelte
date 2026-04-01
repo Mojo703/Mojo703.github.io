@@ -26,10 +26,10 @@
 			{/each}
 		</div>
 		{#if showPrev}
-			<button class="prev" onclick={() => scroll(-1)}>&#10094;</button>
+			<button class="prev" onclick={() => scroll(-1)} aria-label="Scroll gallery left">&#10094;</button>
 		{/if}
 		{#if showNext}
-			<button class="next" onclick={() => scroll(1)}>&#10095;</button>
+			<button class="next" onclick={() => scroll(1)} aria-label="Scroll gallery right">&#10095;</button>
 		{/if}
 	</div>
 </div>
@@ -52,22 +52,26 @@
 		flex-direction: row;
 		overflow: auto;
 		scroll-snap-type: x mandatory;
-		background-color: inherit;
-		border-radius: 5px;
+		border-radius: 3px;
 		align-items: center;
-		box-shadow: var(--low-shadow);
 		scroll-behavior: smooth;
 		max-width: fit-content;
+		background-color: var(--bg-surface-inset);
+		border: 1px solid var(--border-edge);
+		box-shadow:
+			var(--inset-shadow),
+			var(--inset-highlight);
 	}
 
 	.image-pane img {
 		height: 15em;
-		border-radius: 5px;
+		border-radius: 2px;
 		margin: 5px;
 		text-align: center;
 		scroll-snap-align: center;
 		flex: none;
 		max-width: calc(100% - 10px);
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 	}
 
 	.prev,
@@ -80,12 +84,13 @@
 		padding: 8px;
 		font-weight: bold;
 		font-size: 18px;
-		transition: 0.1s ease;
+		transition: background-color 0.15s ease, color 0.15s ease;
 		border-radius: 0 3px 3px 0;
 		user-select: none;
-		color: rgba(0, 0, 0, 0.5);
-		background-color: rgba(255, 255, 255, 0.5);
 		border: none;
+		color: var(--text-primary);
+		background-color: var(--bg-surface);
+		box-shadow: var(--panel-shadow);
 	}
 
 	.next {
@@ -98,7 +103,7 @@
 	.prev:active,
 	.next:active {
 		color: white;
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: var(--accent);
 	}
 
 	@media (max-width: 800px) {

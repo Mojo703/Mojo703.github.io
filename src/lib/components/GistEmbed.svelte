@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { theme } from '$lib/stores/theme';
+
 	let { gistId }: { gistId: string } = $props();
 
 	let container: HTMLDivElement;
@@ -9,7 +11,6 @@
 			.then((res) => res.json())
 			.then((data) => {
 				if (!container) return;
-				// Inject the stylesheet if not already present
 				if (!document.querySelector(`link[href="${data.stylesheet}"]`)) {
 					const link = document.createElement('link');
 					link.rel = 'stylesheet';
@@ -21,13 +22,19 @@
 	});
 </script>
 
-<div class="gist" bind:this={container}></div>
+<div class="gist-wrapper" class:invert-gist={$theme === 'dark'} bind:this={container}></div>
 
 <style>
-	.gist {
+	.gist-wrapper {
 		max-width: 100%;
 		overflow: auto;
 		font-size: smaller;
+		border: 1px solid var(--border-edge);
+		border-radius: 3px;
+	}
+
+	.gist-wrapper.invert-gist {
+		filter: invert(0.88) hue-rotate(180deg);
 	}
 
 	:global(.gist-data) {

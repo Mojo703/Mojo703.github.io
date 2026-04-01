@@ -26,18 +26,26 @@
 
 <style>
 	.collapsible {
-		background-color: rgba(0, 0, 0, 0.1);
 		padding: 5px;
-		border-radius: 5px;
+		border-radius: 3px;
 		margin: 0.5em 0;
 		display: grid;
-		box-shadow: var(--low-shadow);
+		background-color: var(--bg-surface-inset);
+		border: 1px solid var(--border-edge);
+		box-shadow:
+			var(--inset-shadow),
+			var(--inset-highlight);
+		transition: background-color 0.15s ease;
+	}
+
+	.collapsible:hover {
+		background-color: var(--bg-surface-raised);
 	}
 
 	.collapsible > h3 {
 		margin: 0 0 10px 0;
 		cursor: pointer;
-		font-family: Consolas, monaco, monospace;
+		color: var(--text-heading);
 	}
 
 	.collapsible.closed > h3 {
@@ -50,6 +58,7 @@
 
 	.collapsible.closed > h3::before {
 		content: '+';
+		color: var(--accent);
 	}
 
 	.collapsible > h3::before {
@@ -57,5 +66,6 @@
 		padding: 0 10px;
 		display: inline-block;
 		text-align: center;
+		color: var(--accent);
 	}
 </style>

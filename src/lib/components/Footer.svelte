@@ -14,5 +14,12 @@
 	footer {
 		text-align: center;
 		margin-top: 3em;
+		padding-top: 1.5em;
+		border-top: 1px solid var(--border-edge);
+		color: var(--text-secondary);
+	}
+
+	footer :global(a) {
+		color: var(--accent);
 	}
 </style>

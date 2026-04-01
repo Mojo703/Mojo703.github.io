@@ -2,7 +2,7 @@
 	let { sections }: { sections: { id: string; label: string }[] } = $props();
 </script>
 
-<nav id="sections">
+<nav id="sections" aria-label="Page sections">
 	<span>Jump To</span>
 	<div>
 		{#each sections as section}
@@ -20,16 +20,20 @@
 		list-style: none;
 		top: 0;
 		z-index: 1;
-		background-color: rgba(255, 255, 255, 0.788);
-		border-radius: 0 0 7px 0;
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+		border-radius: 0 0 5px 0;
 		grid-template-rows: auto 0;
-		font-family: Consolas, monaco, monospace;
+		background-color: var(--bg-surface);
+		border: 1px solid var(--border-edge);
+		box-shadow:
+			var(--panel-shadow),
+			var(--panel-highlight),
+			var(--panel-depth);
+		backdrop-filter: blur(6px);
 	}
 
 	#sections:hover,
 	#sections:active {
-		background-color: rgb(255, 255, 255);
+		background-color: var(--bg-surface-raised);
 		grid-template-rows: auto auto;
 	}
 
@@ -37,6 +41,10 @@
 		display: block;
 		text-align: center;
 		margin-bottom: 5px;
+		color: var(--text-secondary);
+		text-transform: uppercase;
+		font-size: 0.8em;
+		letter-spacing: 1px;
 	}
 
 	#sections > div {
@@ -58,5 +66,6 @@
 
 	#sections > div > a:hover {
 		background-color: var(--accent-hover);
+		text-decoration: none;
 	}
 </style>

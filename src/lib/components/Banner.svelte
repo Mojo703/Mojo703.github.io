@@ -12,17 +12,23 @@
 		top: 0;
 		left: 0;
 		z-index: -1;
+		filter: brightness(var(--banner-brightness));
 	}
 
 	h1 {
 		margin: 150px auto 10px auto;
-		background-color: white;
-		color: black;
 		width: fit-content;
-		padding: 0 10px;
-		border-radius: 5px;
+		padding: 4px 16px;
+		border-radius: 3px;
 		text-align: center;
-		box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-		font-family: Consolas, monaco, monospace;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		background-color: var(--bg-surface);
+		color: var(--text-heading);
+		border: 1px solid var(--border-edge);
+		box-shadow:
+			var(--panel-shadow),
+			var(--panel-highlight),
+			var(--panel-depth);
 	}
 </style>
