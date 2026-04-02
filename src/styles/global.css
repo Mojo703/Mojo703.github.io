@@ -8,10 +8,10 @@
 	--bg-surface-raised: #ddd9d3;
 	--bg-surface-inset: #f2eee8;
 
-	/* Text */
-	--text-primary: #1a1714;
-	--text-secondary: #4a4540;
-	--text-heading: #0f0d0b;
+	/* Text — warm tones, headings are tinted not pure black */
+	--text-primary: #2a2320;
+	--text-secondary: #5a534a;
+	--text-heading: #3d2e1a;
 
 	/* Accent */
 	--accent: #3a8a3f;
@@ -23,7 +23,7 @@
 	/* Nav */
 	--nav-bg: #e0dcd6;
 	--nav-bg-hover: rgba(58, 138, 63, 0.12);
-	--nav-text: #1a1714;
+	--nav-text: #2a2320;
 
 	/* 3D Panel Effects — Raised */
 	--panel-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -67,9 +67,10 @@
 		--bg-surface-raised: #313031;
 		--bg-surface-inset: #414040;
 
-		--text-primary: #e0ddd5;
-		--text-secondary: #a8a49c;
-		--text-heading: #f0ede6;
+		/* Text — warm cream headings like Factorio, white body */
+		--text-primary: #e8e4dc;
+		--text-secondary: #9a958c;
+		--text-heading: #ffe6c0;
 
 		--accent: #5eb663;
 		--accent-hover: #4da352;
@@ -78,7 +79,7 @@
 
 		--nav-bg: rgba(0, 0, 0, 0.5);
 		--nav-bg-hover: rgba(94, 182, 99, 0.15);
-		--nav-text: #e0ddd5;
+		--nav-text: #e8e4dc;
 
 		--panel-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 		--panel-highlight: inset 1px 1px 0 rgba(255, 255, 255, 0.06);
@@ -116,9 +117,9 @@
 	--bg-surface-raised: #313031;
 	--bg-surface-inset: #414040;
 
-	--text-primary: #e0ddd5;
-	--text-secondary: #a8a49c;
-	--text-heading: #f0ede6;
+	--text-primary: #e8e4dc;
+	--text-secondary: #9a958c;
+	--text-heading: #ffe6c0;
 
 	--accent: #5eb663;
 	--accent-hover: #4da352;
@@ -127,7 +128,7 @@
 
 	--nav-bg: rgba(0, 0, 0, 0.5);
 	--nav-bg-hover: rgba(94, 182, 99, 0.15);
-	--nav-text: #e0ddd5;
+	--nav-text: #e8e4dc;
 
 	--panel-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 	--panel-highlight: inset 1px 1px 0 rgba(255, 255, 255, 0.06);
@@ -164,9 +165,9 @@
 	--bg-surface-raised: #ddd9d3;
 	--bg-surface-inset: #f2eee8;
 
-	--text-primary: #1a1714;
-	--text-secondary: #4a4540;
-	--text-heading: #0f0d0b;
+	--text-primary: #2a2320;
+	--text-secondary: #5a534a;
+	--text-heading: #3d2e1a;
 
 	--accent: #3a8a3f;
 	--accent-hover: #2d6e31;
@@ -175,7 +176,7 @@
 
 	--nav-bg: #e0dcd6;
 	--nav-bg-hover: rgba(58, 138, 63, 0.12);
-	--nav-text: #1a1714;
+	--nav-text: #2a2320;
 
 	--panel-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 	--panel-highlight: inset 1px 1px 0 rgba(255, 255, 255, 0.7);
@@ -225,7 +226,9 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 700;
 	color: var(--text-heading);
