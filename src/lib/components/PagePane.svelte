@@ -20,118 +20,93 @@
 </script>
 
 <div class="page-pane">
-	<h3 class="pane-header">
-		<a
-			{href}
-			target={external ? "_blank" : undefined}
-			rel={external ? "noopener noreferrer" : undefined}
-		>
-			{title}<Icon name="external" size={14} />
-		</a>
-	</h3>
-	<div class="pane-body">
-		<a
-			class="pane-image-link"
-			{href}
-			target={external ? "_blank" : undefined}
-			rel={external ? "noopener noreferrer" : undefined}
-		>
-			<img src={image} {alt} />
-		</a>
+	<img class="pane-image" src={image} {alt} />
+	<div class="pane-text">
+		<h3 class="pane-title">
+			<a
+				{href}
+				target={external ? "_blank" : undefined}
+				rel={external ? "noopener noreferrer" : undefined}
+			>
+				{title}<Icon name="external" size={14} />
+			</a>
+		</h3>
 		<p>{@render children()}</p>
 	</div>
 </div>
 
 <style>
+	/* panel-hole-inner: no bevel border, 1px margin creates separator via parent's darker bg */
 	.page-pane {
-		margin: 0 0 8px 0;
-		border-radius: 2px;
-		background-color: var(--bg-surface-raised);
-		border: 4px solid transparent;
-		border-image: var(--bevel-border) 4 fill;
-		box-shadow: var(--panel-shadow);
-		transition:
-			box-shadow 50ms ease,
-			transform 50ms ease;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: flex-start;
+		gap: 12px;
+		margin: 1px 0;
+		padding: 10px;
+		background-color: var(--bg-surface-inset);
+		border: none;
+		box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+		overflow: hidden;
 	}
 
-	.page-pane:hover {
-		transform: translateY(-1px);
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+	/* Alternating rows — very subtle, like panel-evenodd */
+	.page-pane:nth-child(odd) {
+		background-color: var(--bg-surface-inset);
 	}
 
-	.pane-header {
-		margin: 0;
-		padding: 6px 12px;
+	.page-pane:nth-child(even) {
+		filter: brightness(1.04);
+	}
+
+	/* Image: top-right, fixed size, does not stretch */
+	.pane-image {
+		flex-shrink: 0;
+		width: 240px;
+		height: 180px;
+		object-fit: cover;
+		display: block;
+	}
+
+	.pane-text {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.pane-title {
+		margin: 0 0 6px 0;
 		font-size: 1.05em;
 		font-weight: 700;
 		color: var(--text-heading);
-		background: none;
-		box-shadow: none;
-		border-image: none;
 	}
 
-	.pane-header > a {
+	.pane-title > a {
 		color: inherit;
 		text-decoration: none;
-	}
-
-	.pane-header > a:hover {
-		color: var(--accent);
-		text-decoration: none;
-	}
-
-	.pane-body {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		gap: 12px;
-		margin: 0 8px 8px 8px;
-		padding: 12px;
-		background-color: var(--bg-surface-inset);
-		border: 4px solid transparent;
-		border-image: var(--inset-bevel-border) 4 fill;
-		box-shadow: var(--inset-shadow), var(--inset-highlight);
+		display: inline-flex;
 		align-items: center;
+		gap: 4px;
 	}
 
-	.pane-image-link {
-		display: block;
-		border-radius: 2px;
-		padding: 4px;
-		background-color: var(--bg-surface);
-		border: 1px solid var(--border-edge);
-		box-shadow: var(--inset-shadow), var(--inset-highlight);
+	.pane-title > a:hover {
+		color: var(--accent);
 	}
 
-	.pane-image-link > img {
-		width: 100%;
-		max-width: 250px;
-		display: block;
-		border-radius: 1px;
-	}
-
-	.pane-body > p {
-		margin: 0.4em 0.5em;
+	.pane-text > p {
+		margin: 0;
 		color: var(--text-secondary);
+		font-size: 0.95em;
+		line-height: 1.5;
 	}
 
 	@media (max-width: 800px) {
-		.pane-body {
-			display: block;
-			text-align: center;
+		.page-pane {
+			flex-direction: column;
 		}
 
-		.pane-image-link {
-			display: inline-block;
-		}
-
-		.pane-image-link > img {
-			max-width: 280px;
-		}
-
-		.pane-body > p {
-			text-align: justify;
-			margin: 1em 1.5em;
+		.pane-image {
+			width: 100%;
+			height: 180px;
 		}
 	}
 </style>

@@ -22,20 +22,13 @@
 
 <style>
 	.spacer {
-		padding: 0 5vw 5vw 5vw;
+		padding: 0 5vw;
 	}
 
 	.content {
 		margin: 50px auto 0 auto;
-		padding: 10px;
+		padding: 0 10px;
 		max-width: 1200px;
-		background-color: var(--bg-surface);
 		color: var(--text-primary);
-		border: 1px solid var(--border-edge);
-		border-radius: 3px;
-		box-shadow:
-			var(--panel-shadow),
-			var(--panel-highlight),
-			var(--panel-depth);
 	}
 </style>

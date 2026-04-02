@@ -23,8 +23,7 @@
 
 <style>
 	.panel {
-		margin: 1.2em 0;
-		border-radius: 2px;
+		margin: 16px 0;
 		background-color: var(--bg-surface-raised);
 		border: 4px solid transparent;
 		border-image: var(--bevel-border) 4 fill;
@@ -44,25 +43,24 @@
 		box-shadow: none;
 	}
 
+	/* panel-lighter + panel-hole:
+	   8px margin = panel's own padding (space between frame bevel and grid).
+	   2px padding = panel-hole's padding (shows between cells as separators). */
 	.panel-body {
-		margin: 0 8px 8px 8px;
-		padding: 10px 12px;
-		background-color: var(--bg-surface-inset);
-		border: 4px solid transparent;
-		border-image: var(--inset-bevel-border) 4 fill;
-		box-shadow: var(--inset-shadow), var(--inset-highlight);
+		margin: 8px;
+		background-color: var(--bg-surface-raised);
+		padding: 2px;
+		box-shadow:
+			inset 0 2px 2px -1px rgba(0, 0, 0, 0.6),
+			inset 0 0 2px 0 rgba(0, 0, 0, 0.4),
+			inset 0 -2px 2px -2px rgba(255, 255, 255, 0.08);
 	}
 
+	/* Text-only content: sits in a cell-like row */
 	.panel-body > :global(p),
 	.panel-body > :global(ul) {
-		margin: 0.6em 0.5em;
-	}
-
-	.panel-body > :global(p:first-child) {
-		margin-top: 0.3em;
-	}
-
-	.panel-body > :global(p:last-child) {
-		margin-bottom: 0.3em;
+		background-color: var(--bg-surface-inset);
+		margin: 1px 0;
+		padding: 0.5em 10px;
 	}
 </style>
