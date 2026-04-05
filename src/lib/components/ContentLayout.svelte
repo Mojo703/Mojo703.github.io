@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import Navbar from './Navbar.svelte';
-	import Footer from './Footer.svelte';
+	import type { Snippet } from "svelte";
+	import Navbar from "./Navbar.svelte";
+	import Footer from "./Footer.svelte";
 
 	let {
-		updated = '2024-12-21',
-		children
+		updated = "2024-12-21",
+		children,
 	}: {
 		updated?: string;
 		children: Snippet;
@@ -23,6 +23,12 @@
 <style>
 	.spacer {
 		padding: 0 5vw;
+	}
+
+	@media (max-width: 600px) {
+		.spacer {
+			padding: 0;
+		}
 	}
 
 	.content {

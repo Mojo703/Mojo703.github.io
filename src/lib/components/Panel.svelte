@@ -58,9 +58,14 @@
 
 	/* Text-only content: sits in a cell-like row */
 	.panel-body > :global(p),
-	.panel-body > :global(ul) {
+	.panel-body > :global(ul),
+	.panel-body > :global(.image-pane) {
 		background-color: var(--bg-surface-inset);
 		margin: 1px 0;
 		padding: 0.5em 10px;
+	}
+
+	.panel-body > :global(ul) {
+		padding-left: 2em;
 	}
 </style>

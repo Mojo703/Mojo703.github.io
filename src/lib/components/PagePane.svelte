@@ -20,7 +20,9 @@
 </script>
 
 <div class="page-pane">
-	<img class="pane-image" src={image} {alt} />
+	<a class="pane-image-link" {href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined} tabindex="-1">
+		<img class="pane-image" src={image} {alt} />
+	</a>
 	<div class="pane-text">
 		<h3 class="pane-title">
 			<a
@@ -28,7 +30,7 @@
 				target={external ? "_blank" : undefined}
 				rel={external ? "noopener noreferrer" : undefined}
 			>
-				{title}<Icon name="external" size={14} />
+				{title}{#if external}<Icon name="external" size={14} />{/if}
 			</a>
 		</h3>
 		<p>{@render children()}</p>
@@ -60,12 +62,22 @@
 	}
 
 	/* Image: top-right, fixed size, does not stretch */
-	.pane-image {
+	.pane-image-link {
 		flex-shrink: 0;
 		width: 240px;
 		height: 180px;
+		display: block;
+	}
+
+	.pane-image {
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
 		display: block;
+		border: 1px solid var(--border-edge);
+		box-shadow:
+			var(--inset-shadow),
+			var(--inset-highlight);
 	}
 
 	.pane-text {
@@ -104,7 +116,7 @@
 			flex-direction: column;
 		}
 
-		.pane-image {
+		.pane-image-link {
 			width: 100%;
 			height: 180px;
 		}

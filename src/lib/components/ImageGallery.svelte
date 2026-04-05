@@ -31,45 +31,33 @@
 	});
 </script>
 
-<div class="center">
-	<div class="image-pane">
-		<div class="image-pane-scroll" bind:this={scrollContainer} onscroll={updateButtons}>
-			{#each images as src}
-				<img {src} alt="" onload={onImageLoad} />
-			{/each}
-		</div>
-		{#if showPrev}
-			<button class="prev" onclick={() => scroll(-1)} aria-label="Scroll gallery left">&#10094;</button>
-		{/if}
-		{#if showNext}
-			<button class="next" onclick={() => scroll(1)} aria-label="Scroll gallery right">&#10095;</button>
-		{/if}
+<div class="image-pane">
+	<div class="image-pane-scroll" bind:this={scrollContainer} onscroll={updateButtons}>
+		{#each images as src}
+			<img {src} alt="" onload={onImageLoad} />
+		{/each}
 	</div>
+	{#if showPrev}
+		<button class="prev" onclick={() => scroll(-1)} aria-label="Scroll gallery left">&#10094;</button>
+	{/if}
+	{#if showNext}
+		<button class="next" onclick={() => scroll(1)} aria-label="Scroll gallery right">&#10095;</button>
+	{/if}
 </div>
 
 <style>
-	.center {
-		margin: 0 auto;
-		max-width: fit-content;
-	}
-
 	.image-pane {
 		position: relative;
-		margin: 2em 10vw;
-		max-width: fit-content;
 	}
 
 	.image-pane-scroll {
-		padding: 10px;
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		overflow: auto;
 		scroll-snap-type: x mandatory;
-		border-radius: 3px;
-		align-items: center;
 		scroll-behavior: smooth;
-		max-width: fit-content;
-		background-color: var(--bg-surface-inset);
 		border: 1px solid var(--border-edge);
 		box-shadow:
 			var(--inset-shadow),
@@ -80,10 +68,10 @@
 		height: 15em;
 		border-radius: 2px;
 		margin: 5px;
-		text-align: center;
 		scroll-snap-align: center;
 		flex: none;
 		max-width: calc(100% - 10px);
+		object-fit: contain;
 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 	}
 
@@ -92,7 +80,6 @@
 		cursor: pointer;
 		position: absolute;
 		top: 50%;
-		width: auto;
 		margin-top: -22px;
 		padding: 8px;
 		font-weight: bold;
@@ -128,11 +115,5 @@
 		padding-top: 10px;
 		padding-bottom: 6px;
 		box-shadow: var(--btn-active-shadow);
-	}
-
-	@media (max-width: 800px) {
-		.image-pane {
-			margin: 2em 0;
-		}
 	}
 </style>
