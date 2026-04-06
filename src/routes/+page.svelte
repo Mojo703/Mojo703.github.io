@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Banner from '$lib/components/Banner.svelte';
-	import ContentLayout from '$lib/components/ContentLayout.svelte';
-	import PagePane from '$lib/components/PagePane.svelte';
-	import Panel from '$lib/components/Panel.svelte';
+	import Banner from "$lib/components/Banner.svelte";
+	import ContentLayout from "$lib/components/ContentLayout.svelte";
+	import PagePane from "$lib/components/PagePane.svelte";
+	import Panel from "$lib/components/Panel.svelte";
 
 	let { data } = $props();
 </script>
@@ -18,17 +18,30 @@
 		<p>
 			I am a third year Computer Engineering major at Simon Fraser
 			University. My largest interests are game development, hiking, and
-			reading. I have a passion for solving problems, and I love programming.
+			reading. I have a passion for solving problems, and I love
+			programming.
 		</p>
 		<p>
-			From my start of building cardboard forts,
-			creating massive popsicle stick boats, and making lightweight gliders,
-			I have progressed to working on game development, mechanical design of
-			soccer playing robots, and studying to become a computer engineer at SFU.
+			From my start of building cardboard forts, creating massive popsicle
+			stick boats, and making lightweight gliders, I have progressed to
+			working on game development, mechanical design of soccer playing
+			robots, and studying to become a computer engineer at SFU.
 		</p>
 	</Panel>
 
 	<Panel title="My Projects:">
+		<PagePane
+			image="/images/Winding/milestone_img-000.png"
+			alt="The assembled solenoid winding machine."
+			title="Solenoid Winding Machine"
+			href="/solenoid-winder"
+		>
+			A group project for the ENSC 351 class at SFU. My team built a bench
+			top CNC solenoid winding machine with a C-axis spindle and Z-axis
+			traverse. I wrote the control software in Rust, running on a
+			BeagleY-AI with a TUI for local and remote operation.
+		</PagePane>
+
 		<PagePane
 			image="/images/Digit Recognition.png"
 			alt="Screenshots showing the digit classification client."
@@ -36,9 +49,10 @@
 			href="/projects/Digit Classify/index.html"
 			external
 		>
-			A personal project. A client-side digit classification system. The page contains a canvas for the user to
-			draw on, which gets classified locally by a convolutional neural network. It runs in real time using a WASM
-			and web worker structure.
+			A personal project. A client-side digit classification system. The
+			page contains a canvas for the user to draw on, which gets
+			classified locally by a convolutional neural network. It runs in
+			real time using a WASM and web worker structure.
 		</PagePane>
 
 		<PagePane

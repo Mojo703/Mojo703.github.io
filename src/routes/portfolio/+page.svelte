@@ -10,6 +10,7 @@
 	let { data } = $props();
 
 	const sections = [
+		{ id: "solenoid-winder", label: "Solenoid Winder" },
 		{ id: "robot-soccer", label: "Robot Soccer" },
 		{ id: "software", label: "Software" },
 		{ id: "code-samples", label: "Code Samples" },
@@ -26,6 +27,27 @@
 <Banner src="/images/banner.png" title="Matthew's Portfolio" />
 
 <ContentLayout updated={data.updated}>
+	<Panel title="Solenoid Winding Machine" id="solenoid-winder">
+		<p>
+			A group project for ENSC 351. We built a bench top CNC solenoid
+			winding machine with a C-axis spindle and Z-axis linear traverse.
+			I was responsible for the control software, written in Rust and
+			running on a BeagleY-AI. The TUI interface displays real-time
+			motor state and accepts movement commands over local HDMI or
+			remote SSH.
+		</p>
+		<p>
+			<a href="/solenoid-winder">Read more about this project.</a>
+		</p>
+		<ImageGallery
+			images={[
+				"/images/Winding/milestone_img-000.png",
+				"/images/Winding/milestone_img-001.png",
+				"/images/Winding/milestone_img-002.png",
+			]}
+		/>
+	</Panel>
+
 	<Panel title="Robot Soccer Mechanics Team" id="robot-soccer">
 		<p>
 			Designed to compete in the 2024
