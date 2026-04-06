@@ -3,7 +3,7 @@
 </script>
 
 <nav id="sections" aria-label="Page sections">
-	<span>Jump To</span>
+	<a href="#sections" class="label">Jump To</a>
 	<div>
 		{#each sections as section}
 			<a href="#{section.id}">{section.label}</a>
@@ -32,12 +32,13 @@
 	}
 
 	#sections:hover,
-	#sections:active {
+	#sections:active,
+	#sections:focus-within {
 		background-color: var(--bg-surface-raised);
 		grid-template-rows: auto auto;
 	}
 
-	#sections > span {
+	#sections > .label {
 		display: block;
 		text-align: center;
 		margin-bottom: 5px;
@@ -45,6 +46,7 @@
 		text-transform: uppercase;
 		font-size: 0.8em;
 		letter-spacing: 1px;
+		text-decoration: none;
 	}
 
 	#sections > div {
@@ -66,7 +68,8 @@
 		transition: box-shadow 50ms ease, background-color 50ms ease, padding 50ms ease;
 	}
 
-	#sections > div > a:hover {
+	#sections > div > a:hover,
+	#sections > div > a:focus-visible {
 		background-color: var(--accent-hover);
 		text-decoration: none;
 		box-shadow: var(--btn-hover-shadow);
