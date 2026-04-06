@@ -7,6 +7,8 @@
 	import Panel from '$lib/components/Panel.svelte';
 	import SectionNav from '$lib/components/SectionNav.svelte';
 
+	let { data } = $props();
+
 	const sections = [
 		{ id: 'robot-soccer', label: 'Robot Soccer' },
 		{ id: 'software', label: 'Software' },
@@ -23,7 +25,7 @@
 <SectionNav {sections} />
 <Banner src="/images/banner.png" title="Matthew's Portfolio" />
 
-<ContentLayout updated="2024-01-27">
+<ContentLayout updated={data.updated}>
 	<Panel title="Robot Soccer Mechanics Team" id="robot-soccer">
 		<p>
 			Designed to compete in the 2024

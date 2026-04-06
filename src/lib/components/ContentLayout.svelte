@@ -4,10 +4,10 @@
 	import Footer from "./Footer.svelte";
 
 	let {
-		updated = "2024-12-21",
+		updated,
 		children,
 	}: {
-		updated?: string;
+		updated: string | undefined;
 		children: Snippet;
 	} = $props();
 </script>

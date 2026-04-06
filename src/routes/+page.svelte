@@ -3,6 +3,8 @@
 	import ContentLayout from '$lib/components/ContentLayout.svelte';
 	import PagePane from '$lib/components/PagePane.svelte';
 	import Panel from '$lib/components/Panel.svelte';
+
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -11,7 +13,7 @@
 
 <Banner src="/images/banner.png" title="Matthew Goodman" />
 
-<ContentLayout>
+<ContentLayout updated={data.updated}>
 	<Panel title="Who am I:">
 		<p>
 			I am a third year Computer Engineering major at Simon Fraser
