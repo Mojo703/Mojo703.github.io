@@ -77,6 +77,9 @@
 			Below are some code samples for several languages I have learned. They
 			are files taken from some of my projects.
 		</p>
+		<Collapsible title="Rust: Horde game server.">
+			<GistEmbed gistId="Mojo703/12816c678890a888e36741870daec1bd" />
+		</Collapsible>
 		<Collapsible title="JavaScript: Evolution project.">
 			<GistEmbed gistId="Mojo703/4c4558e85b1816ca14689754d6322eec" />
 		</Collapsible>

@@ -6,19 +6,29 @@
 	let container: HTMLDivElement;
 
 	$effect(() => {
-		const url = `https://gist.github.com/${gistId}.json`;
-		fetch(url)
-			.then((res) => res.json())
-			.then((data) => {
-				if (!container) return;
-				if (!document.querySelector(`link[href="${data.stylesheet}"]`)) {
-					const link = document.createElement('link');
-					link.rel = 'stylesheet';
-					link.href = data.stylesheet;
-					document.head.appendChild(link);
-				}
-				container.innerHTML = data.div;
-			});
+		const callbackName = `gist_cb_${gistId.replace(/\W/g, '_')}_${Date.now()}`;
+		const url = `https://gist.github.com/${gistId}.json?callback=${callbackName}`;
+
+		(window as any)[callbackName] = (data: any) => {
+			if (!container) return;
+			if (!document.querySelector(`link[href="${data.stylesheet}"]`)) {
+				const link = document.createElement('link');
+				link.rel = 'stylesheet';
+				link.href = data.stylesheet;
+				document.head.appendChild(link);
+			}
+			container.innerHTML = data.div;
+			delete (window as any)[callbackName];
+		};
+
+		const script = document.createElement('script');
+		script.src = url;
+		document.body.appendChild(script);
+
+		return () => {
+			delete (window as any)[callbackName];
+			script.remove();
+		};
 	});
 </script>
 
